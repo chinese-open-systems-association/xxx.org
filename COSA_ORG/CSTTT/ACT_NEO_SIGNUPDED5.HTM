@@ -1,0 +1,152 @@
+<html>
+
+<!-- Mirrored from www.cosa.org.tw/csttt/act_neo_signup.php?eno=&ermsg=-5 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Mar 2019 09:47:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<Link Rel="stylesheet" Type="text/css" Href="STYLE.CSS">
+<script language="JavaScript" type="text/JavaScript">
+function isCInStr(str)
+{
+  var i;
+  var isC;
+  isC = false;
+  for (i=0;i<str.length;i++) {
+    if (str.charCodeAt(i)>255) {
+      isC = true;
+      break;
+    }
+  }
+  return isC;
+}
+
+function checkNMForm()
+{
+	togglefe=true;
+	tmpmsg="";
+	if(document.topdata.m_name.value=="") {
+		tmpmsg=tmpmsg+" 姓名";
+		togglefe=false;
+	}
+	if(document.topdata.m_mail.value=="") {
+		tmpmsg=tmpmsg+" 電子郵件";
+		togglefe=false;
+	}
+	if(document.topdata.m_bus.value=="") {
+		tmpmsg=tmpmsg+" 機關名稱";
+		togglefe=false;
+	}
+	if(document.topdata.m_dept.value=="") {
+		tmpmsg=tmpmsg+" 部門";
+		togglefe=false;
+	}
+	if(document.topdata.m_title.value=="") {
+		tmpmsg=tmpmsg+" 職稱";
+		togglefe=false;
+	}
+	if(document.topdata.m_b_tel.value=="") {
+		tmpmsg=tmpmsg+" 機關電話";
+		togglefe=false;
+	}
+	if(tmpmsg!="") {
+		alert("您尚未填寫"+tmpmsg+" 欄位");
+		tmpmsg="";
+	}
+
+	if(isCInStr(document.topdata.m_identity.value)) {
+		tmpmsg=tmpmsg+" 身分證字號";
+		togglefe=false;
+	}
+	if(isCInStr(document.topdata.m_mail.value)) {
+		tmpmsg=tmpmsg+" 電子郵件";
+		togglefe=false;
+	}
+	if(isCInStr(document.topdata.m_b_tel.value)) {
+		tmpmsg=tmpmsg+" 機關電話";
+		togglefe=false;
+	}
+	//if(isCInStr(document.topdata.m_b_fax.value)) {
+	//	tmpmsg=tmpmsg+" 行動電話";
+	//	togglefe=false;
+	//}
+	if(tmpmsg!="") {
+		alert("填寫"+tmpmsg+" 欄位請勿使用全形或中文");
+		tmpmsg="";
+	}
+
+	var pattern = new RegExp();
+	pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(document.topdata.m_mail.value.length > 0 && !pattern.test(document.topdata.m_mail.value)) {
+		tmpmsg=tmpmsg+" 電子郵件";
+		togglefe=false;
+	}
+	pattern = /^[A-Z]\d{9}$/;
+	if(document.topdata.m_identity.value.length > 0 && !pattern.test(document.topdata.m_identity.value.toUpperCase())) {
+		tmpmsg=tmpmsg+" 身分證字號";
+		togglefe=false;
+	}
+	if(tmpmsg!="") {
+		alert("填寫"+tmpmsg+" 格式有誤");
+	}
+
+	return togglefe;
+}
+
+function chkMail(formElement) {
+	var pattern = new RegExp();
+	pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(formElement.value.length > 0 && !pattern.test(formElement.value)) {
+		alert("填寫 電子郵件 格式有誤");
+		return false;
+	}
+	return true;
+}
+
+function chkID(formElement) {
+	var pattern = new RegExp();
+	pattern = /^[A-Z]\d{9}$/;
+	if(formElement.value.length > 0 && !pattern.test(formElement.value.toUpperCase())) {
+		alert("填寫 身分證字號 格式有誤");
+		return false;
+	}
+	return true;
+}
+
+function toggleMe() {
+	if(document.topdata.m_option.checked)
+		document.topdata.action="ACT_NEO_VERIFY2.HTM";
+	else
+		document.topdata.action="ACT_NEO_VERIFY.HTM";
+}
+/*function toggleMe() {
+	if(document.getElementById("m_option").checked)
+		document.body.innerHTML=document.body.innerHTML.replace("act_neo_verify.php","act_neo_verify2.php");
+	else
+		document.body.innerHTML=document.body.innerHTML.replace("act_neo_verify2.php","act_neo_verify.php");
+}*/
+</script>
+</head>
+<title>我要報名</title>
+<body>
+<center>
+<table width=100% cellspacing=1 cellpadding=1 style="font-size:13px;background-Color:#cccccc">
+<!--
+<tr class=titlel><span class=micro><td colspan=7>COSA舉辦活動-報名</td></span></tr>
+-->
+<tr>
+<td class=captionc><span class=micro>編號</span></td>
+<!--td class=captionc><span class=micro>地區</span></td-->
+<td class=captionc><span class=micro>活動地點</span></td>
+<td class=captionc><span class=micro>活動日期</span></td>
+<td class=captionc><span class=micro>活動時間</span></td>
+<td class=captionc><span class=micro>活動人數</span></td>
+<td class=captionc><span class=micro>尚有名額</span></td>
+<td class=captionc><span class=micro>備註</span></td>
+</tr>
+</table>
+<p align="center" class=sbred>無此活動</p>
+<p align="center">目前無活動舉辦, 請回到<a href="MEMBER_LOGIN.HTM">上一頁</a></p>
+</center>
+</body>
+
+<!-- Mirrored from www.cosa.org.tw/csttt/act_neo_signup.php?eno=&ermsg=-5 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Mar 2019 09:47:48 GMT -->
+</html>

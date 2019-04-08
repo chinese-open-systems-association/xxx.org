@@ -1,0 +1,191 @@
+
+table caption,
+table th,
+table td {
+    padding: 0.1em 0.5em 0.1em 0.5em;
+    margin: 0;
+    margin: 0.1em;
+    vertical-align: top;
+    text-indent: 3px;
+}
+
+table tr.odd th,
+table tr.odd {
+    background-color: #E5E5E5;
+}
+
+table tr.even th,
+table tr.even {
+    background-color: #D5D5D5;
+}
+
+table tr.marked th,
+table tr.marked {
+    background-color: #FFD5D5;
+}
+
+table tr.odd:hover,
+table tr.even:hover,
+table tr.odd:hover th,
+table tr.even:hover th,
+table tr.hover th,
+table tr.hover {
+    background-color: #D5FFD5;
+}
+
+table .value {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.value {
+    font-family: "Courier New", Courier, monospace;
+}
+.value .attention {
+    color: red;
+    font-weight: bold;
+}
+.value .allfine {
+    color: green;
+}
+
+.sbred {
+    color: #FF0000;
+    font-weight: bold;
+}
+.sbgreen {
+    color: #00FF00;
+    font-weight: bold;
+}
+.sbblue {
+    color: #0000FF;
+    font-weight: bold;
+}
+.sbblack {
+    color: #000000;
+    font-weight: bold;
+}
+.sred {
+    color: #FF0000;
+}
+.sgreen {
+    color: #00FF00;
+}
+.sblue {
+    color: #0000FF;
+}
+.sblack {
+    color: #000000;
+}
+.tb {
+    font-size: 13px;
+    background-color: #EEEEEE;
+}
+.title {
+    text-align: right;
+    background-color: #EEEEEE;
+    letter-spacing: 0px;
+    width:90;
+}
+.caption {
+    text-align: right;
+    background-color: #DDDDDD;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: black;
+}
+.titlec {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #EEEEEE;
+    letter-spacing: 0px;
+    width:90;
+}
+.titlect {
+    text-align: center;
+    vertical-align: middle;
+    background-color: BurlyWood;
+    letter-spacing: 0px;
+    width:90;
+}
+.titlel {
+    text-align: left;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    letter-spacing: 4px;
+    width:90;
+}
+.captionc {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #DDDDDD;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: black;
+}
+.micro {
+    position:relative;
+    top:2;
+}
+.tdc {
+    padding: 0.1em 0.5em 0.1em 0.5em;
+    margin: 0;
+    margin: 0.1em;
+    vertical-align: middle;
+    text-indent: 3px;
+}
+
+A:link {text-decoration:none;color:blue;}
+A:visited {text-decoration:none;color:blue;}
+A:active {text-decoration:none;}
+A:hover {text-decoration:none;color:red;}
+
+/* logo */
+#logo
+{ background: #FFF url(IMAGE/COSA_CIS.GIF) no-repeat center;
+  color: #67705A;
+	width: 640px;
+  height: 180px;
+  text-align: left;
+  padding: 0px 95px 0px 0px;
+}
+
+#logo h1
+{ margin: 0px;
+  padding: 110px 0px 0px 18px;
+  font-size: 185%;
+  letter-spacing: .2em;
+}
+
+#logo h2
+{ margin: 0px;
+  padding: 1px 0px 0px 18px;
+  font-size: 150%;
+  letter-spacing: .1em;
+}
+
+h1
+{ background: transparent;
+  /*color: #7C9D49;
+  color: #6DE613;*/
+  color: #6D00EC;
+  border-color: #B5CA91;
+}
+
+h2
+{ background: #6DE613;
+  /*color: #E60013;
+  color: #6DFFEC;*/
+  color: #131313;
+  border-color: #B5CA91;
+}
+
+
+div b{display:block; height:1px; overflow:hidden; background:MediumOrchid;}
+b.r1{margin:0 6px; background:black;}
+b.r2{margin:0 3px; border-left:3px solid; border-right:3px solid;}
+b.r3{margin:0 2px; border-left:1px solid; border-right:1px solid;}
+b.r4{margin:0 1px; border-left:1px solid; border-right:1px solid;}
+.content{margin:0px; padding:10px; border-left:1px solid; border-right:1px solid; background:MediumOrchid;}
+
+

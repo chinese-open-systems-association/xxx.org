@@ -1,0 +1,85 @@
+<html>
+
+<!-- Mirrored from www.cosa.org.tw/csttt/member_login.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Mar 2019 10:04:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="STYLE.CSS">
+<script language="JavaScript" type="text/JavaScript">
+function chkMail(formElement) {
+	var pattern = new RegExp();
+	pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(formElement.value.length > 0 && !pattern.test(formElement.value)) {
+		alert("填寫 會員信箱 格式有誤");
+		return false;
+	}
+	return true;
+}
+</script>
+<title>會員登入頁面</title>
+</head>
+<body>
+<center>
+<form name="form1" method="post" action="http://www.cosa.org.tw/csttt/member_loginto.php">
+	
+<img src="IMAGE/TITLE_LOGIN.GIF">
+<table width=555 cellspacing=1 cellpadding=3 class=tb>
+<tr>
+  <td>
+  【<font color=red><b>注意事項</b></font>】<br>
+  <br>
+  如果您尚未申請入會，請下載下列申請表格，填寫完畢後再以&nbsp;<a href="mailto:service@cosa.org.tw">
+  <img style="position:relative;top:1" src="IMAGE/EMAIL.GIF" border=0>
+  &nbsp;E-MAIL</a>&nbsp;寄至 COSA ，我們會有專人為您服務<br>
+  <br>
+  <span style="font-family:verdana">
+  <font color=orange>■</font>個人入會申請表格&nbsp;&nbsp;[<a href="../INDEXCE6A.HTM">Download</a>]<br>
+  <br>
+  <font color=orange>■</font>團體入會申請表格&nbsp;&nbsp;[<a href="../INDEX7B05.HTM">Download</a>]<br>
+  <br>
+  </span>
+  <font color=orange>■</font>報名成功者會由專人再次通知，若超過工作人員最後作業時間，也可採現場報名的方式<br>
+  </td>
+</tr>
+</table>
+<br>
+<table width=555 cellspacing=1 cellpadding=1 class=tb>
+<tr><!--a href="act_non_member.php">非會員活動報名頁面,請按此</a-->
+</tr>
+<tr>&nbsp;&nbsp;</tr>
+<!--tr><a href="act_top_member.php">ODF應用推廣說明會報名,請按此</a-->
+<!--tr><a href="act_top_member.php">OSS應用實務 Workshop 報名,請按此</a-->
+<!--tr><a href="temp.html">WEB 2.0伺服器端同步平台研討會報名,請按此</a-->
+<!--tr><a href="act_top_member.php">WEB 2.0伺服器端同步平台研討會報名,請按此</a-->
+<!--tr><a href="act_non_member.php">建立開放應用環境論壇 報名,請按此</a-->
+<tr><strong><a href="ACT_NEO_CLASS.HTM">建立開放應用環境論壇 報名,請按此</a></strong>
+</tr><br>
+<!--tr><a href="temp.html">WEB 2.0伺服器端同步平台研討會報名(主計處專用),請按此</a-->
+<!--tr><a href="act_top_member_a.php">WEB 2.0伺服器端同步平台研討會報名(主計處專用),請按此</a-->
+</tr><br>
+<tr>&nbsp;&nbsp;</tr><br>
+<tr><del><a href="PCSCHOOL.HTM">ODF訓練課程報名,請按此</a></del>
+</tr><br>
+<tr>&nbsp;&nbsp;</tr><br>
+<tr>
+  <td colspan=2 class=caption><span class=micro>會員登入</span></td>
+</tr>
+<tr>
+  <td class=title><span class=micro>．會員信箱．</span></td>
+  <td><input type=text name=user_id onblur="chkMail(this);" onkeyup="value=value.replace(/[^a-zA-Z0-9_\.\-@]/,'');">&nbsp;<span style="color:red;font-size:11px">請輸入完整的申請信箱</span>
+  </td>
+</tr>
+<tr>
+  <td class=title><span class=micro>．會員密碼．</span></td>
+  <td><input type=password name=user_pass onkeyup="value=value.replace(/[^a-zA-Z0-9]/,'');">&nbsp;<span style="color:red;font-size:11px">英數字組合</span>
+	</td>
+</tr>
+<tr>
+  <td style="text-align:center" colspan=2><input type=submit value=送出資料>&nbsp;<input type=reset value=清除重填></td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+
+<!-- Mirrored from www.cosa.org.tw/csttt/member_login.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Mar 2019 10:04:13 GMT -->
+</html>

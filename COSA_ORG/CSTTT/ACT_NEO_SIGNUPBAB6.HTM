@@ -1,0 +1,267 @@
+<html>
+
+<!-- Mirrored from www.cosa.org.tw/csttt/act_neo_signup.php?eno=83 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Mar 2019 09:47:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<Link Rel="stylesheet" Type="text/css" Href="STYLE.CSS">
+<script language="JavaScript" type="text/JavaScript">
+function isCInStr(str)
+{
+  var i;
+  var isC;
+  isC = false;
+  for (i=0;i<str.length;i++) {
+    if (str.charCodeAt(i)>255) {
+      isC = true;
+      break;
+    }
+  }
+  return isC;
+}
+
+function checkNMForm()
+{
+	togglefe=true;
+	tmpmsg="";
+	if(document.topdata.m_name.value=="") {
+		tmpmsg=tmpmsg+" 姓名";
+		togglefe=false;
+	}
+	if(document.topdata.m_mail.value=="") {
+		tmpmsg=tmpmsg+" 電子郵件";
+		togglefe=false;
+	}
+	if(document.topdata.m_bus.value=="") {
+		tmpmsg=tmpmsg+" 機關名稱";
+		togglefe=false;
+	}
+	if(document.topdata.m_dept.value=="") {
+		tmpmsg=tmpmsg+" 部門";
+		togglefe=false;
+	}
+	if(document.topdata.m_title.value=="") {
+		tmpmsg=tmpmsg+" 職稱";
+		togglefe=false;
+	}
+	if(document.topdata.m_b_tel.value=="") {
+		tmpmsg=tmpmsg+" 機關電話";
+		togglefe=false;
+	}
+	if(tmpmsg!="") {
+		alert("您尚未填寫"+tmpmsg+" 欄位");
+		tmpmsg="";
+	}
+
+	if(isCInStr(document.topdata.m_identity.value)) {
+		tmpmsg=tmpmsg+" 身分證字號";
+		togglefe=false;
+	}
+	if(isCInStr(document.topdata.m_mail.value)) {
+		tmpmsg=tmpmsg+" 電子郵件";
+		togglefe=false;
+	}
+	if(isCInStr(document.topdata.m_b_tel.value)) {
+		tmpmsg=tmpmsg+" 機關電話";
+		togglefe=false;
+	}
+	//if(isCInStr(document.topdata.m_b_fax.value)) {
+	//	tmpmsg=tmpmsg+" 行動電話";
+	//	togglefe=false;
+	//}
+	if(tmpmsg!="") {
+		alert("填寫"+tmpmsg+" 欄位請勿使用全形或中文");
+		tmpmsg="";
+	}
+
+	var pattern = new RegExp();
+	pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(document.topdata.m_mail.value.length > 0 && !pattern.test(document.topdata.m_mail.value)) {
+		tmpmsg=tmpmsg+" 電子郵件";
+		togglefe=false;
+	}
+	pattern = /^[A-Z]\d{9}$/;
+	if(document.topdata.m_identity.value.length > 0 && !pattern.test(document.topdata.m_identity.value.toUpperCase())) {
+		tmpmsg=tmpmsg+" 身分證字號";
+		togglefe=false;
+	}
+	if(tmpmsg!="") {
+		alert("填寫"+tmpmsg+" 格式有誤");
+	}
+
+	return togglefe;
+}
+
+function chkMail(formElement) {
+	var pattern = new RegExp();
+	pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(formElement.value.length > 0 && !pattern.test(formElement.value)) {
+		alert("填寫 電子郵件 格式有誤");
+		return false;
+	}
+	return true;
+}
+
+function chkID(formElement) {
+	var pattern = new RegExp();
+	pattern = /^[A-Z]\d{9}$/;
+	if(formElement.value.length > 0 && !pattern.test(formElement.value.toUpperCase())) {
+		alert("填寫 身分證字號 格式有誤");
+		return false;
+	}
+	return true;
+}
+
+function toggleMe() {
+	if(document.topdata.m_option.checked)
+		document.topdata.action="ACT_NEO_VERIFY2.HTM";
+	else
+		document.topdata.action="ACT_NEO_VERIFY.HTM";
+}
+/*function toggleMe() {
+	if(document.getElementById("m_option").checked)
+		document.body.innerHTML=document.body.innerHTML.replace("act_neo_verify.php","act_neo_verify2.php");
+	else
+		document.body.innerHTML=document.body.innerHTML.replace("act_neo_verify2.php","act_neo_verify.php");
+}*/
+</script>
+</head>
+<title>我要報名</title>
+<body>
+<center>
+<table width=100% cellspacing=1 cellpadding=1 style="font-size:13px;background-Color:#cccccc">
+<!--
+<tr class=titlel><span class=micro><td colspan=7>COSA舉辦活動-報名</td></span></tr>
+-->
+<tr>
+<td class=captionc><span class=micro>編號</span></td>
+<!--td class=captionc><span class=micro>地區</span></td-->
+<td class=captionc><span class=micro>活動地點</span></td>
+<td class=captionc><span class=micro>活動日期</span></td>
+<td class=captionc><span class=micro>活動時間</span></td>
+<td class=captionc><span class=micro>活動人數</span></td>
+<td class=captionc><span class=micro>尚有名額</span></td>
+<td class=captionc><span class=micro>備註</span></td>
+</tr>
+	<tr class=titlec><span class=micro>
+		<td class=tdc>第12屆開放應用環境論壇</td>
+		<td class=tdc>科技服務大樓創新廳</td>
+		<td class=tdc>2013-10-18</td>
+		<td class=tdc>10:00-16:00</td>
+		<td class=tdc>200</td>
+		<td class=tdc>57</td>
+		<td class=tdc></td>
+    		
+	</span></tr>
+</table>
+<table>
+<tr>
+<td>
+<img src="IMAGE/DEPT/_.GIF" width=640 height=440></td>
+<td>
+　
+<div style="width: 160px">
+<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r4"></b>
+<p class="content">詳細活動地點資訊</p>
+<b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
+</div>
+<p>
+科技服務大樓 創新廳<p>地址：<a href="http://goo.gl/VWS9uN">台北市松山區民生東路四段133號14樓</a> 
+</td>
+</tr>
+</table>
+<form method="post" action="http://www.cosa.org.tw/csttt/act_neo_verify.php" onSubmit="return checkNMForm()" name="topdata">
+	
+<font color=red><b>目前寄送至yahoo.com.tw信箱的系統確認信會被Yahoo!奇摩暫時擱置，請儘量提供其他的信箱</b></font>
+<table width=90% cellspacing=1 cellpadding=1 style="font-size:13px;background-Color:#cccccc">
+<tr>
+ 	<td class=caption><span class=micro>活動報名</span></td>
+<td>第12屆開放應用環境論壇</td>
+<td><input type=hidden name=m_eno value="83"></td>
+<td><input type=hidden name=m_source value=""></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．姓　　名 [必填]．</span></nobr></td><td><input type=text name=m_name></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．性　　別 [必填]．</span></nobr>
+	<td><select name=m_sex>
+			<option>男</option>
+			<option>女</option>
+		</select>
+	</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．&nbsp;身&nbsp;分&nbsp;證&nbsp;字&nbsp;號&nbsp;．</span></nobr></td><td><input type=text name=m_identity maxlength="10" onblur="chkID(this)" onkeyup="value=value.toUpperCase();value=value.replace(/[^A-Z0-9]/,'')">（<font color=red>登錄公務人員學習時數者請填</font>）</td>
+
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．電子郵件 [必填]．</span></nobr></td><td><input type=text name=m_mail onblur="chkMail(this)" onkeyup="value=value.replace(/[^a-zA-Z0-9_\.\-@]/,'')">（報名成功會寄發確認函，範例為：sample@cosa.org.tw）</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．公司名稱 [必填]．</span></nobr></td><td><input type=text name=m_bus value=""></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．部　　門 [必填]．</span></nobr></td><td><input type=text name=m_dept value=""></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．職　　稱 [必填]．</span></nobr></td><td><input type=text name=m_title></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．公司電話 [必填]．</span></nobr></td><td><input type=text name=m_b_tel value="">（格式為：0x-xxxxxxxx#分機）</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td class=title><nobr><span class=micro>．公司地址 [必填]．</span></nobr></td><td><input type=text name=m_b_addr value=""></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<!--
+<tr><td class=title><nobr><span class=micro>．備　　註．</span></nobr></td><td><input type=text name=m_ps>（茹素者請註明）</td>
+-->
+<tr><td class=title><nobr><span class=micro>．備　　註．</span></nobr></td><td>素食<input type=checkbox name=m_ps value="素">（茹素者請打勾）</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<!--tr><td class=title><nobr><span class=micro>．　來&nbsp;&nbsp;&nbsp;源　．</span></nobr></td><td><input type=text name=m_source value=""></td>
+<td></td>
+<td></td>
+<td></td>
+</tr-->
+<tr><td style="text-align:left" colspan=2><font color=red>
+※以上資料為申請公務人員學習時數用，請務必填寫正確！
+<br>
+※您的資料僅使用於本次論壇報名及登錄公務人員學習時數之用，個別資料絕對保密，不做其他用途亦不對外公開。
+</font><td><input type=submit value=我要報名></td>
+<td></td>
+<td></td>
+<td><a href="MEMBER_LOGIN.HTM">回報名首頁</a></td>
+</tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+
+<!-- Mirrored from www.cosa.org.tw/csttt/act_neo_signup.php?eno=83 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Mar 2019 09:47:45 GMT -->
+</html>
